@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indra Devi | Java Backend Developer</title>
+
+<style>
+:root {
+    --bg-color: #f4f6f9;
+    --text-color: #222;
+    --card-color: #ffffff;
+    --accent: #1b263b;
+}
+
+body.dark {
+    --bg-color: #0d1b2a;
+    --text-color: #f4f6f9;
+    --card-color: #1b263b;
+    --accent: #e0e1dd;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--accent);
+    color: white;
+}
+
+header h1 { margin: 0; font-size: 36px; }
+header p { margin: 8px 0; }
+
+button {
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    background: #ffb703;
+    border-radius: 5px;
+}
+
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 8px;
+}
+
+.card {
+    background: var(--card-color);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    flex: 1 1 45%;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--accent);
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>INDRA DEVI S</h1>
+    <p>Java Backend Developer | Spring Boot | REST APIs | SQL</p>
+    <p>Building scalable backend systems with clean architecture.</p>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+        Computer Science student with strong expertise in Java backend development using Spring Boot and REST APIs. 
+        Experienced in building scalable applications with structured architecture and database integration.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Technical Skills</h2>
+    <div class="card">
+        <p><strong>Languages:</strong> Java, Python, SQL, C</p>
+        <p><strong>Frameworks:</strong> Spring Boot, REST APIs</p>
+        <p><strong>Database:</strong> MySQL, H2, SQLite</p>
+        <p><strong>Concepts:</strong> OOPS, DBMS, DSA, OS</p>
+        <p><strong>Tools:</strong> Git, Maven, VS Code</p>
+    </div>
+</section>
+
+<section>
+<h2>Projects</h2>
+
+<div class="project-container">
+
+<div class="project card">
+    <img src="YOUR_MEDIATRACK_SCREENSHOT.png" alt="MediTrack Screenshot">
+    <h3>MediTrack – Health Monitoring System</h3>
+    <p><strong>Tech:</strong> Java, Spring Boot, MySQL</p>
+    <ul>
+        <li>Role-based authentication</li>
+        <li>Layered architecture</li>
+        <li>Automated alert system</li>
+    </ul>
+    <a href="YOUR_GITHUB_LINK">View Code</a>
+</div>
+
+<div class="project card">
+    <img src="YOUR_STREAMING_SCREENSHOT.png" alt="Streaming Platform Screenshot">
+    <h3>Streaming Web Platform</h3>
+    <p><strong>Tech:</strong> Spring Boot, REST APIs, H2</p>
+    <ul>
+        <li>CRUD operations</li>
+        <li>Search & filtering</li>
+        <li>Database-driven UI</li>
+    </ul>
+    <a href="YOUR_GITHUB_LINK">View Code</a>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Internship Experience</h2>
+<div class="card">
+    <p><strong>Java Developer Intern – Elewayte</strong></p>
+    <p>Developed database-driven scheduling system using Java & JDBC.</p>
+
+    <p><strong>Full Stack Intern – NLC India Limited</strong></p>
+    <p>Built secure web portal with authentication workflow.</p>
+</div>
+</section>
+
+<section>
+<h2>Contact</h2>
+<div class="card">
+    <p>Email: indhusomu5400@gmail.com</p>
+    <p>LinkedIn: linkedin.com/in/indra-devi-s-5b14a9293</p>
+    <p>GitHub: github.com/YOUR_USERNAME</p>
+</div>
+</section>
+
+<footer>
+© 2026 Indra Devi | Java Backend Developer
+</footer>
+
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
