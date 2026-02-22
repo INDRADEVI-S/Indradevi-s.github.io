@@ -20,7 +20,6 @@ body{
     color:#1e293b;
 }
 
-/* NAVIGATION */
 nav{
     position:fixed;
     width:100%;
@@ -51,7 +50,6 @@ nav ul li a:hover{
     color:#2563eb;
 }
 
-/* SECTIONS */
 section{
     padding:100px 50px;
     min-height:100vh;
@@ -116,7 +114,6 @@ footer{
     color:white;
 }
 
-/* Responsive */
 @media(max-width:768px){
     nav{ padding:15px 20px; }
     section{ padding:100px 20px; }
@@ -127,7 +124,6 @@ footer{
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
     <h2>Indra</h2>
     <ul>
@@ -135,35 +131,31 @@ footer{
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
-<!-- HERO -->
 <section id="home" class="hero">
     <h1>Hello, I'm Indra Devi S</h1>
     <h2><span class="typing"></span></h2>
 
     <p>
-        Computer Science Engineering student specializing in Java, Spring Boot, and REST APIs.
-        Passionate about building scalable backend systems with clean architecture.
+       Detail-oriented and strong foundation in Java, OOPS, DBMS and basic Spring Boot. Built multiple backend applications with REST APIs and database integration. Passionate about developing scalable enterprise solutions.
     </p>
 
-    <!-- Resume Button -->
     <a href="Indra_Devi_Resume.pdf" download class="btn">Download Resume</a>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
     <h2>About Me</h2>
     <div class="card">
-        I have internship experience as a Java Developer and Full Stack Developer,
-        working on authentication workflows, CRUD operations and database integration.
-        My core strength lies in building structured backend applications using Spring Boot and MySQL.
+        Internships as a Java Developer and Full Stack Developer, 
+        worked on enterprise-ready systems including authentication workflows, CRUD operations 
+        and database integration. I focus on developing structured backend applications using Spring Boot and MySQL.
     </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
     <h2>Technical Skills</h2>
     <div class="skills-grid">
@@ -171,40 +163,63 @@ footer{
         <div class="card">Spring Boot</div>
         <div class="card">REST APIs</div>
         <div class="card">MySQL</div>
-        <div class="card">OOPS</div>
+        <div class="card">OOPS Principles</div>
         <div class="card">DSA</div>
-        <div class="card">Git</div>
+        <div class="card">Python</div>
         <div class="card">HTML & CSS</div>
     </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
     <h2>Projects</h2>
 
     <div class="card">
         <h3>MediTrack – Health Monitoring System</h3>
-        Built using Java, Spring Boot and MySQL with role-based authentication and automated alerts.
+        Using Java, Implemented role-based authentication (Patient-Caretaker) with secure REST APIs and MySQL database integration
+        and automated medication alerts.
     </div>
 
     <div class="card">
         <h3>Streaming Web Platform</h3>
-        Developed full-stack streaming platform using Spring Boot with CRUD APIs and filtering.
+        Developed full-stack streaming platform using Spring Boot with CRUD APIs, 
+        search functionality and database-backed content management.
     </div>
 
     <div class="card">
-        <h3>Smart Appointment System</h3>
-        Built queue management system using Core Java, JDBC and MySQL.
+        <h3>Smart Appointment & Queue Management System</h3>
+        Developed using Core Java, JDBC and MySQL with scheduling and slot allocation logic.
     </div>
 </section>
 
-<!-- CONTACT -->
+<section id="achievements">
+    <h2>Certifications & Achievements</h2>
+
+    <div class="card">
+        <strong>Certifications:</strong><br>
+        • AWS Cloud Practitioner Essentials – NASSCOM (Gold)<br>
+        • Cybersecurity Analysis & Design – NASSCOM (Gold)<br>
+        • NPTEL – Programming in Java (67%)<br>
+        • NPTEL – Introduction to Machine Learning ((65%)
+    </div>
+
+    <div class="card">
+        <strong>Conference & Research:</strong><br>
+        • Shortlisted at CHRIST University, Bangalore – Cryptocurrency Price Predictor<br>
+    </div>
+
+    <div class="card">
+        <strong>Hackathons & Events:</strong><br>
+        • Smart India Hackathon (SIH)<br>
+        • PECTEAM Technical Conference<br>
+    </div>
+</section>
+
 <section id="contact">
     <h2>Contact</h2>
     <div class="card">
         <p><strong>Email:</strong> indhusomu5400@gmail.com</p>
         <p><strong>LinkedIn:</strong> linkedin.com/in/indra-devi-s-5b14a9293</p>
-        <p><strong>GitHub:</strong> github.com/YOUR_USERNAME</p>
+        <p><strong>GitHub:</strong> github.com/INDRADEVI-S</p>
         <p>Open to entry-level Software Development opportunities.</p>
     </div>
 </section>
@@ -214,7 +229,6 @@ footer{
 </footer>
 
 <script>
-// Smooth Scroll
 document.querySelectorAll('nav a').forEach(anchor=>{
     anchor.addEventListener('click',function(e){
         e.preventDefault();
@@ -224,29 +238,28 @@ document.querySelectorAll('nav a').forEach(anchor=>{
     });
 });
 
-// Typing Effect
-const typingElement = document.querySelector(".typing");
-const words = ["Java Backend Developer", "Spring Boot Specialist", "REST API Developer"];
-let wordIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+const typingElement=document.querySelector(".typing");
+const words=["Java Backend Developer"];
+let wordIndex=0;
+let charIndex=0;
+let isDeleting=false;
 
-function typeEffect() {
-    const currentWord = words[wordIndex];
-    if (isDeleting) {
-        typingElement.textContent = currentWord.substring(0, charIndex--);
-    } else {
-        typingElement.textContent = currentWord.substring(0, charIndex++);
+function typeEffect(){
+    const currentWord=words[wordIndex];
+    if(isDeleting){
+        typingElement.textContent=currentWord.substring(0,charIndex--);
+    }else{
+        typingElement.textContent=currentWord.substring(0,charIndex++);
     }
 
-    if (!isDeleting && charIndex === currentWord.length) {
-        setTimeout(() => isDeleting = true, 1000);
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
+    if(!isDeleting && charIndex===currentWord.length){
+        setTimeout(()=>isDeleting=true,1000);
+    }else if(isDeleting && charIndex===0){
+        isDeleting=false;
+        wordIndex=(wordIndex+1)%words.length;
     }
 
-    setTimeout(typeEffect, isDeleting ? 60 : 100);
+    setTimeout(typeEffect,isDeleting?60:100);
 }
 
 typeEffect();
