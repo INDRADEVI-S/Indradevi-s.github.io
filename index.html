@@ -5,181 +5,251 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Indra Devi | Java Backend Developer</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root {
-    --bg-color: #f4f6f9;
-    --text-color: #222;
-    --card-color: #ffffff;
-    --accent: #1b263b;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-body.dark {
-    --bg-color: #0d1b2a;
-    --text-color: #f4f6f9;
-    --card-color: #1b263b;
-    --accent: #e0e1dd;
+body{
+    background:linear-gradient(135deg,#f0f9ff,#e0f2fe);
+    color:#1e293b;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
-    transition: 0.3s;
+/* NAVIGATION */
+nav{
+    position:fixed;
+    width:100%;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    padding:15px 50px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    z-index:1000;
 }
 
-header {
-    text-align: center;
-    padding: 60px 20px;
-    background: var(--accent);
-    color: white;
+nav h2{ color:#2563eb; }
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
 }
 
-header h1 { margin: 0; font-size: 36px; }
-header p { margin: 8px 0; }
-
-button {
-    padding: 8px 15px;
-    border: none;
-    cursor: pointer;
-    background: #ffb703;
-    border-radius: 5px;
+nav ul li a{
+    text-decoration:none;
+    color:#1e293b;
+    font-weight:500;
+    transition:0.3s;
 }
 
-section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 50px 20px;
+nav ul li a:hover{
+    color:#2563eb;
 }
 
-h2 {
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 8px;
+/* SECTIONS */
+section{
+    padding:100px 50px;
+    min-height:100vh;
 }
 
-.card {
-    background: var(--card-color);
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.hero{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
-.project-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.hero h1{
+    font-size:48px;
 }
 
-.project {
-    flex: 1 1 45%;
+.typing{
+    color:#2563eb;
+    font-weight:600;
+    border-right:3px solid #2563eb;
+    padding-right:5px;
 }
 
-.project img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
+.hero p{
+    margin-top:20px;
+    font-size:18px;
+    max-width:600px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: var(--accent);
-    color: white;
+.btn{
+    margin-top:25px;
+    display:inline-block;
+    padding:12px 25px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    margin-top:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.05);
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#2563eb;
+    color:white;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    nav{ padding:15px 20px; }
+    section{ padding:100px 20px; }
+    .hero h1{ font-size:32px; }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>INDRA DEVI S</h1>
-    <p>Java Backend Developer | Spring Boot | REST APIs | SQL</p>
-    <p>Building scalable backend systems with clean architecture.</p>
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-</header>
+<!-- NAVBAR -->
+<nav>
+    <h2>Indra</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-<section>
+<!-- HERO -->
+<section id="home" class="hero">
+    <h1>Hello, I'm Indra Devi S</h1>
+    <h2><span class="typing"></span></h2>
+
+    <p>
+        Computer Science Engineering student specializing in Java, Spring Boot, and REST APIs.
+        Passionate about building scalable backend systems with clean architecture.
+    </p>
+
+    <!-- Resume Button -->
+    <a href="Indra_Devi_Resume.pdf" download class="btn">Download Resume</a>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
     <h2>About Me</h2>
     <div class="card">
-        <p>
-        Computer Science student with strong expertise in Java backend development using Spring Boot and REST APIs. 
-        Experienced in building scalable applications with structured architecture and database integration.
-        </p>
+        I have internship experience as a Java Developer and Full Stack Developer,
+        working on authentication workflows, CRUD operations and database integration.
+        My core strength lies in building structured backend applications using Spring Boot and MySQL.
     </div>
 </section>
 
-<section>
+<!-- SKILLS -->
+<section id="skills">
     <h2>Technical Skills</h2>
-    <div class="card">
-        <p><strong>Languages:</strong> Java, Python, SQL, C</p>
-        <p><strong>Frameworks:</strong> Spring Boot, REST APIs</p>
-        <p><strong>Database:</strong> MySQL, H2, SQLite</p>
-        <p><strong>Concepts:</strong> OOPS, DBMS, DSA, OS</p>
-        <p><strong>Tools:</strong> Git, Maven, VS Code</p>
+    <div class="skills-grid">
+        <div class="card">Java</div>
+        <div class="card">Spring Boot</div>
+        <div class="card">REST APIs</div>
+        <div class="card">MySQL</div>
+        <div class="card">OOPS</div>
+        <div class="card">DSA</div>
+        <div class="card">Git</div>
+        <div class="card">HTML & CSS</div>
     </div>
 </section>
 
-<section>
-<h2>Projects</h2>
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects</h2>
 
-<div class="project-container">
+    <div class="card">
+        <h3>MediTrack – Health Monitoring System</h3>
+        Built using Java, Spring Boot and MySQL with role-based authentication and automated alerts.
+    </div>
 
-<div class="project card">
-    <img src="YOUR_MEDIATRACK_SCREENSHOT.png" alt="MediTrack Screenshot">
-    <h3>MediTrack – Health Monitoring System</h3>
-    <p><strong>Tech:</strong> Java, Spring Boot, MySQL</p>
-    <ul>
-        <li>Role-based authentication</li>
-        <li>Layered architecture</li>
-        <li>Automated alert system</li>
-    </ul>
-    <a href="YOUR_GITHUB_LINK">View Code</a>
-</div>
+    <div class="card">
+        <h3>Streaming Web Platform</h3>
+        Developed full-stack streaming platform using Spring Boot with CRUD APIs and filtering.
+    </div>
 
-<div class="project card">
-    <img src="YOUR_STREAMING_SCREENSHOT.png" alt="Streaming Platform Screenshot">
-    <h3>Streaming Web Platform</h3>
-    <p><strong>Tech:</strong> Spring Boot, REST APIs, H2</p>
-    <ul>
-        <li>CRUD operations</li>
-        <li>Search & filtering</li>
-        <li>Database-driven UI</li>
-    </ul>
-    <a href="YOUR_GITHUB_LINK">View Code</a>
-</div>
-
-</div>
+    <div class="card">
+        <h3>Smart Appointment System</h3>
+        Built queue management system using Core Java, JDBC and MySQL.
+    </div>
 </section>
 
-<section>
-<h2>Internship Experience</h2>
-<div class="card">
-    <p><strong>Java Developer Intern – Elewayte</strong></p>
-    <p>Developed database-driven scheduling system using Java & JDBC.</p>
-
-    <p><strong>Full Stack Intern – NLC India Limited</strong></p>
-    <p>Built secure web portal with authentication workflow.</p>
-</div>
-</section>
-
-<section>
-<h2>Contact</h2>
-<div class="card">
-    <p>Email: indhusomu5400@gmail.com</p>
-    <p>LinkedIn: linkedin.com/in/indra-devi-s-5b14a9293</p>
-    <p>GitHub: github.com/YOUR_USERNAME</p>
-</div>
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+        <p><strong>Email:</strong> indhusomu5400@gmail.com</p>
+        <p><strong>LinkedIn:</strong> linkedin.com/in/indra-devi-s-5b14a9293</p>
+        <p><strong>GitHub:</strong> github.com/YOUR_USERNAME</p>
+        <p>Open to entry-level Software Development opportunities.</p>
+    </div>
 </section>
 
 <footer>
-© 2026 Indra Devi | Java Backend Developer
+© 2026 Indra Devi S | Java Backend Developer
 </footer>
 
 <script>
-function toggleDarkMode() {
-    document.body.classList.toggle("dark");
+// Smooth Scroll
+document.querySelectorAll('nav a').forEach(anchor=>{
+    anchor.addEventListener('click',function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior:'smooth'
+        });
+    });
+});
+
+// Typing Effect
+const typingElement = document.querySelector(".typing");
+const words = ["Java Backend Developer", "Spring Boot Specialist", "REST API Developer"];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+    const currentWord = words[wordIndex];
+    if (isDeleting) {
+        typingElement.textContent = currentWord.substring(0, charIndex--);
+    } else {
+        typingElement.textContent = currentWord.substring(0, charIndex++);
+    }
+
+    if (!isDeleting && charIndex === currentWord.length) {
+        setTimeout(() => isDeleting = true, 1000);
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+    }
+
+    setTimeout(typeEffect, isDeleting ? 60 : 100);
 }
+
+typeEffect();
 </script>
 
 </body>
